@@ -367,6 +367,20 @@
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
         }
 
+        .driver .champion-badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid #ffd700;
+            padding: 0.05rem 0.6rem;
+            border-radius: 20px;
+            margin-left: 6px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
         .car {
             font-family: 'Rajdhani', sans-serif;
             font-weight: 700;
@@ -396,6 +410,12 @@
             color: #ff6666;
             border-color: #661111;
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+        }
+
+        .dnf {
+            color: #994444;
+            font-weight: 600;
+            font-style: italic;
         }
 
         /* Личный зачет */
@@ -461,6 +481,19 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
         }
 
+        .standings-table .champion-badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.15);
+            border: 1px solid #ffd700;
+            padding: 0.05rem 0.6rem;
+            border-radius: 20px;
+            margin-left: 8px;
+            letter-spacing: 1px;
+        }
+
         /* Победители */
         .winner-grid {
             display: grid;
@@ -523,8 +556,13 @@
         .car-sabre-13 { color: #b8860b; }
         .car-sabre-50 { color: #1a2b6b; }
         .car-sabre-49 { color: #b8c2d6; }
+        .car-sabre-53 { color: #ffffff; text-shadow: 0 0 6px #002868, 0 0 12px #bf0a30; background: linear-gradient(135deg, #002868, #ffffff, #bf0a30); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+        .car-sabre-71 { color: #3d2b1f; text-shadow: 0 0 6px #1a1a1a; background: linear-gradient(135deg, #1a1a1a, #5a3d2b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+        .car-sabre-65 { color: #cc3333; text-shadow: 0 0 8px rgba(200, 0, 0, 0.4); }
+        .car-sabre-69 { color: #7cb342; text-shadow: 0 0 8px rgba(255, 235, 59, 0.6); background: linear-gradient(135deg, #7cb342, #fdd835); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+        .car-sabre-42 { color: #42a5f5; text-shadow: 0 0 10px rgba(66, 165, 245, 0.5); }
 
-        .car-sabre-36, .car-sabre-39, .car-sabre-33, .car-sabre-48, .car-sabre-30, .car-sabre-56, .car-sabre-26, .car-sabre-13, .car-sabre-50 {
+        .car-sabre-36, .car-sabre-39, .car-sabre-33, .car-sabre-48, .car-sabre-30, .car-sabre-56, .car-sabre-26, .car-sabre-13, .car-sabre-50, .car-sabre-53, .car-sabre-71, .car-sabre-65, .car-sabre-69, .car-sabre-42 {
             font-weight: 700;
         }
 
@@ -629,7 +667,7 @@
     <h1>
         🏁 NASCAR GTA Championship
         <small>1 сезон</small>
-        <span class="season-badge">🏆 активен</span>
+        <span class="season-badge">🏆 завершен</span>
     </h1>
     <div class="tabs">
         <button class="tab-btn active" data-page="home">Главная</button>
@@ -646,21 +684,20 @@
         <div style="background: rgba(20, 8, 8, 0.9); backdrop-filter: blur(6px); border-radius: 30px; padding: 2.5rem 2rem; border: 1px solid #3a1515; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);">
             <div class="home-title">
                 🏎️ 1 сезон
-                <span>в самом разгаре</span>
+                <span>завершен</span>
             </div>
             <p class="home-text">
                 Добро пожаловать на чемпионат <strong>NASCAR GTA</strong>! 
-                Сезон 1 уже стартовал, пилоты борются за каждое очко. 
-                Следите за результатами этапов и личным зачетом.
+                Сезон 1 завершен. Поздравляем <strong style="color: #ffd700;">Vin_Disel69</strong> с чемпионством!
             </p>
             <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 20px;">
                 <div class="home-stat">
-                    <span>Текущий лидер:</span> 
+                    <span>Чемпион сезона:</span> 
                     <strong>Vin_Disel69</strong>
                 </div>
                 <div class="home-stat">
                     <span>Проведено этапов:</span> 
-                    <strong>3 из 5</strong>
+                    <strong>4 из 5</strong>
                 </div>
             </div>
         </div>
@@ -672,6 +709,7 @@
             <button class="sub-tab-btn active" data-sub="stage1">1 этап</button>
             <button class="sub-tab-btn" data-sub="stage2">2 этап</button>
             <button class="sub-tab-btn" data-sub="stage3">3 этап</button>
+            <button class="sub-tab-btn" data-sub="stage4">4 этап</button>
         </div>
 
         <div id="sub-stage1" class="sub-page active">
@@ -716,6 +754,23 @@
                 <div class="result-item"><span class="pos">8</span> <span class="driver">SOVYCH05 (56)</span> — <span class="car car-sabre-56">Sabre 56</span> <span class="points">2 очка</span></div>
             </div>
         </div>
+
+        <!-- 4 ЭТАП -->
+        <div id="sub-stage4" class="sub-page">
+            <div class="race-card">
+                <h2>🏁 4 этап <span>трасса</span></h2>
+                <div class="result-item"><span class="pos">1</span> <span class="driver">jok (53)</span> — <span class="car car-sabre-53">Sabre 53</span> <span class="points">12 очков</span></div>
+                <div class="result-item"><span class="pos">2</span> <span class="driver">Araklapejuz (71)</span> — <span class="car car-sabre-71">Sabre 71</span> <span class="points">9 очков</span></div>
+                <div class="result-item"><span class="pos">3</span> <span class="driver">kastillio (48)</span> — <span class="car car-sabre-48">Sabre 48</span> <span class="points">7 очков</span></div>
+                <div class="result-item"><span class="pos">4</span> <span class="driver">ROBA (65)</span> — <span class="car car-sabre-65">Sabre 65</span> <span class="points">6 очков</span></div>
+                <div class="result-item"><span class="pos">5</span> <span class="driver">wasDIE (69)</span> — <span class="car car-sabre-69">Sabre 69</span> <span class="points">5 очков</span></div>
+                <div class="result-item"><span class="pos">6</span> <span class="driver">Tail_ (26)</span> — <span class="car car-sabre-26">Sabre 26</span> <span class="points">4 очка</span></div>
+                <div class="result-item"><span class="pos">7</span> <span class="driver">vitall_duo (42)</span> — <span class="car car-sabre-42">Sabre 42</span> <span class="points">3 очка</span></div>
+                <div class="result-item"><span class="pos">8</span> <span class="driver">Vin_Disel69 (33)</span> — <span class="car car-sabre-33">Sabre 33</span> <span class="points">2 очка <span class="champion-badge">ЧЕМПИОН</span></span></div>
+                <div class="result-item"><span class="pos">9</span> <span class="driver">ALIN (39)</span> — <span class="car car-sabre-39">Sabre 39</span> <span class="points">1 очко</span></div>
+                <div class="result-item"><span class="pos">DNF</span> <span class="driver dnf">kanatkazx</span></div>
+            </div>
+        </div>
     </div>
 
     <!-- ЛИЧНЫЙ ЗАЧЕТ -->
@@ -724,19 +779,22 @@
             <table class="standings-table">
                 <thead><tr><th>#</th><th>Пилот</th><th>Очки</th></tr></thead>
                 <tbody>
-                    <tr><td class="pos">1</td><td>Vin_Disel69 (33)</td><td>28</td></tr>
-                    <tr><td class="pos">2</td><td>femtuza (36)</td><td>16</td></tr>
-                    <tr><td class="pos">3</td><td>ALIN (39)</td><td>14</td></tr>
-                    <tr><td class="pos">4</td><td>FloeSS (30)</td><td>14</td></tr>
-                    <tr><td class="pos">5</td><td>H_Ravin (13)</td><td>12</td></tr>
-                    <tr><td class="pos">6</td><td>kastillio (48)</td><td>11</td></tr>
-                    <tr><td class="pos">7</td><td>Tail_ (26)</td><td>10</td></tr>
+                    <tr><td class="pos">1</td><td>Vin_Disel69 (33) <span class="champion-badge">ЧЕМПИОН</span></td><td>30</td></tr>
+                    <tr><td class="pos">2</td><td>jok (53)</td><td>18</td></tr>
+                    <tr><td class="pos">3</td><td>kastillio (48)</td><td>18</td></tr>
+                    <tr><td class="pos">4</td><td>ALIN (39)</td><td>15</td></tr>
+                    <tr><td class="pos">5</td><td>Tail_ (26)</td><td>14</td></tr>
+                    <tr><td class="pos">6</td><td>FloeSS (30)</td><td>14</td></tr>
+                    <tr><td class="pos">7</td><td>H_Ravin (13)</td><td>12</td></tr>
                     <tr><td class="pos">8</td><td>SOVYCH05 (56)</td><td>9</td></tr>
-                    <tr><td class="pos">9</td><td>jok (-)</td><td>6</td></tr>
-                    <tr><td class="pos">10</td><td>tihon34 (-)</td><td>6</td></tr>
-                    <tr><td class="pos">11</td><td>XaMyH_MaMyH (-)</td><td>5</td></tr>
-                    <tr><td class="pos">12</td><td>kanatkazx (50)</td><td>3</td></tr>
-                    <tr><td class="pos">13</td><td>jetleoden (-)</td><td>3</td></tr>
+                    <tr><td class="pos">9</td><td>Araklapejuz (71)</td><td>9</td></tr>
+                    <tr><td class="pos">10</td><td>ROBA (65)</td><td>6</td></tr>
+                    <tr><td class="pos">11</td><td>tihon34 (-)</td><td>6</td></tr>
+                    <tr><td class="pos">12</td><td>wasDIE (69)</td><td>5</td></tr>
+                    <tr><td class="pos">13</td><td>XaMyH_MaMyH (-)</td><td>5</td></tr>
+                    <tr><td class="pos">14</td><td>kanatkazx (50)</td><td>3</td></tr>
+                    <tr><td class="pos">15</td><td>vitall_duo (42)</td><td>3</td></tr>
+                    <tr><td class="pos">16</td><td>jetleoden (-)</td><td>3</td></tr>
                 </tbody>
             </table>
         </div>
@@ -750,7 +808,7 @@
                 <div class="winner-card"><span class="stage">1 Этап</span> <span class="name">Vin_Disel69</span></div>
                 <div class="winner-card"><span class="stage">2 Этап</span> <span class="name">Vin_Disel69</span></div>
                 <div class="winner-card"><span class="stage">3 Этап</span> <span class="name">H_Ravin</span></div>
-                <div class="winner-card"><span class="stage">4 Этап</span> <span class="empty-winner">—</span></div>
+                <div class="winner-card"><span class="stage">4 Этап</span> <span class="name">jok</span></div>
                 <div class="winner-card"><span class="stage">5 Этап</span> <span class="empty-winner">—</span></div>
             </div>
         </div>
@@ -790,7 +848,8 @@
         const subPages = {
             stage1: document.getElementById('sub-stage1'),
             stage2: document.getElementById('sub-stage2'),
-            stage3: document.getElementById('sub-stage3')
+            stage3: document.getElementById('sub-stage3'),
+            stage4: document.getElementById('sub-stage4')
         };
 
         function setSubActive(stageId) {
