@@ -23,7 +23,6 @@
             overflow-x: hidden;
         }
 
-        /* ===== ФОН С КАРТИНКОЙ ===== */
         .animated-bg {
             position: fixed;
             top: 0;
@@ -47,7 +46,6 @@
             z-index: 1;
         }
 
-        /* Парящие частицы */
         .particles {
             position: fixed;
             top: 0;
@@ -86,7 +84,6 @@
             100% { transform: translateY(-10vh) scale(1) rotate(720deg); opacity: 0; }
         }
 
-        /* ===== ОСНОВНЫЕ СТИЛИ ===== */
         .header, .content, .footer {
             position: relative;
             z-index: 2;
@@ -232,7 +229,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Подвкладки */
         .sub-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -285,7 +281,6 @@
             100% { opacity: 1; transform: scale(1); }
         }
 
-        /* Карточки этапов */
         .race-card {
             background: rgba(20, 8, 8, 0.92);
             backdrop-filter: blur(6px);
@@ -418,7 +413,6 @@
             font-style: italic;
         }
 
-        /* Личный зачет */
         .standings-table {
             width: 100%;
             border-collapse: collapse;
@@ -494,7 +488,6 @@
             letter-spacing: 1px;
         }
 
-        /* Победители */
         .winner-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -561,8 +554,10 @@
         .car-sabre-65 { color: #cc3333; text-shadow: 0 0 8px rgba(200, 0, 0, 0.4); }
         .car-sabre-69 { color: #7cb342; text-shadow: 0 0 8px rgba(255, 235, 59, 0.6); background: linear-gradient(135deg, #7cb342, #fdd835); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
         .car-sabre-42 { color: #42a5f5; text-shadow: 0 0 10px rgba(66, 165, 245, 0.5); }
+        .car-sabre-8 { color: #4a5d23; text-shadow: 0 0 8px rgba(74, 93, 35, 0.5); background: linear-gradient(135deg, #3d4f1a, #5a6b3a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+        .car-sabre-19 { color: #cc3333; text-shadow: 0 0 8px rgba(200, 0, 0, 0.4); }
 
-        .car-sabre-36, .car-sabre-39, .car-sabre-33, .car-sabre-48, .car-sabre-30, .car-sabre-56, .car-sabre-26, .car-sabre-13, .car-sabre-50, .car-sabre-53, .car-sabre-71, .car-sabre-65, .car-sabre-69, .car-sabre-42 {
+        .car-sabre-36, .car-sabre-39, .car-sabre-33, .car-sabre-48, .car-sabre-30, .car-sabre-56, .car-sabre-26, .car-sabre-13, .car-sabre-50, .car-sabre-53, .car-sabre-71, .car-sabre-65, .car-sabre-69, .car-sabre-42, .car-sabre-8, .car-sabre-19 {
             font-weight: 700;
         }
 
@@ -578,7 +573,6 @@
             font-weight: 500;
         }
 
-        /* Главная страница */
         .home-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.8rem;
@@ -651,10 +645,8 @@
 </head>
 <body>
 
-<!-- ===== ФОН С КАРТИНКОЙ ===== -->
 <div class="animated-bg"></div>
 
-<!-- Частицы -->
 <div class="particles">
     <div class="particle"></div><div class="particle"></div><div class="particle"></div>
     <div class="particle"></div><div class="particle"></div><div class="particle"></div>
@@ -662,7 +654,6 @@
     <div class="particle"></div><div class="particle"></div><div class="particle"></div>
 </div>
 
-<!-- ===== ШАПКА ===== -->
 <div class="header">
     <h1>
         🏁 NASCAR GTA Championship
@@ -677,7 +668,6 @@
     </div>
 </div>
 
-<!-- ===== КОНТЕНТ ===== -->
 <div class="content">
     <!-- ГЛАВНАЯ -->
     <div id="page-home" class="page active">
@@ -697,7 +687,7 @@
                 </div>
                 <div class="home-stat">
                     <span>Проведено этапов:</span> 
-                    <strong>4 из 5</strong>
+                    <strong>5 из 5</strong>
                 </div>
             </div>
         </div>
@@ -710,6 +700,7 @@
             <button class="sub-tab-btn" data-sub="stage2">2 этап</button>
             <button class="sub-tab-btn" data-sub="stage3">3 этап</button>
             <button class="sub-tab-btn" data-sub="stage4">4 этап</button>
+            <button class="sub-tab-btn" data-sub="stage5">5 этап</button>
         </div>
 
         <div id="sub-stage1" class="sub-page active">
@@ -755,7 +746,6 @@
             </div>
         </div>
 
-        <!-- 4 ЭТАП -->
         <div id="sub-stage4" class="sub-page">
             <div class="race-card">
                 <h2>🏁 4 этап <span>трасса</span></h2>
@@ -771,30 +761,46 @@
                 <div class="result-item"><span class="pos">DNF</span> <span class="driver dnf">kanatkazx</span></div>
             </div>
         </div>
+
+        <!-- 5 ЭТАП -->
+        <div id="sub-stage5" class="sub-page">
+            <div class="race-card">
+                <h2>🏁 5 этап <span>трасса</span></h2>
+                <div class="result-item"><span class="pos">1</span> <span class="driver">ROBA (65)</span> — <span class="car car-sabre-65">Sabre 65</span> <span class="points">12 очков</span></div>
+                <div class="result-item"><span class="pos">2</span> <span class="driver">Vin_Disel69 (33)</span> — <span class="car car-sabre-33">Sabre 33</span> <span class="points">9 очков</span></div>
+                <div class="result-item"><span class="pos">3</span> <span class="driver">Tail_ (26)</span> — <span class="car car-sabre-26">Sabre 26</span> <span class="points">7 очков</span></div>
+                <div class="result-item"><span class="pos">4</span> <span class="driver">kastillio (48)</span> — <span class="car car-sabre-48">Sabre 48</span> <span class="points">6 очков</span></div>
+                <div class="result-item"><span class="pos">5</span> <span class="driver">ALIN (39)</span> — <span class="car car-sabre-39">Sabre 39</span> <span class="points">5 очков</span></div>
+                <div class="result-item"><span class="pos">6</span> <span class="driver">JOSYLVIO (8)</span> — <span class="car car-sabre-8">Sabre 8</span> <span class="points">4 очка</span></div>
+                <div class="result-item"><span class="pos">7</span> <span class="driver">SOVYCH05 (56)</span> — <span class="car car-sabre-56">Sabre 56</span> <span class="points">3 очка</span></div>
+                <div class="result-item"><span class="pos">8</span> <span class="driver">Mavchik17 (19)</span> — <span class="car car-sabre-19">Sabre 19</span> <span class="points">2 очка</span></div>
+                <div class="result-item"><span class="pos">9</span> <span class="driver">FloeSS (30)</span> — <span class="car car-sabre-30">Sabre 30</span> <span class="points">1 очко</span></div>
+            </div>
+        </div>
     </div>
 
-    <!-- ЛИЧНЫЙ ЗАЧЕТ -->
+    <!-- ЛИЧНЫЙ ЗАЧЕТ (ИТОГОВЫЙ) -->
     <div id="page-standings" class="page">
         <div style="background: rgba(20, 8, 8, 0.9); backdrop-filter: blur(6px); border-radius: 28px; padding: 0.5rem 0 1rem 0; border: 1px solid #3a1515;">
             <table class="standings-table">
                 <thead><tr><th>#</th><th>Пилот</th><th>Очки</th></tr></thead>
                 <tbody>
-                    <tr><td class="pos">1</td><td>Vin_Disel69 (33) <span class="champion-badge">ЧЕМПИОН</span></td><td>30</td></tr>
-                    <tr><td class="pos">2</td><td>jok (53)</td><td>18</td></tr>
-                    <tr><td class="pos">3</td><td>kastillio (48)</td><td>18</td></tr>
-                    <tr><td class="pos">4</td><td>ALIN (39)</td><td>15</td></tr>
-                    <tr><td class="pos">5</td><td>Tail_ (26)</td><td>14</td></tr>
-                    <tr><td class="pos">6</td><td>FloeSS (30)</td><td>14</td></tr>
-                    <tr><td class="pos">7</td><td>H_Ravin (13)</td><td>12</td></tr>
-                    <tr><td class="pos">8</td><td>SOVYCH05 (56)</td><td>9</td></tr>
+                    <tr><td class="pos">1</td><td>Vin_Disel69 (33) <span class="champion-badge">ЧЕМПИОН</span></td><td>39</td></tr>
+                    <tr><td class="pos">2</td><td>kastillio (48)</td><td>24</td></tr>
+                    <tr><td class="pos">3</td><td>Tail_ (26)</td><td>21</td></tr>
+                    <tr><td class="pos">4</td><td>ALIN (39)</td><td>20</td></tr>
+                    <tr><td class="pos">5</td><td>ROBA (65)</td><td>18</td></tr>
+                    <tr><td class="pos">6</td><td>FloeSS (30)</td><td>15</td></tr>
+                    <tr><td class="pos">7</td><td>SOVYCH05 (56)</td><td>12</td></tr>
+                    <tr><td class="pos">8</td><td>H_Ravin (13)</td><td>12</td></tr>
                     <tr><td class="pos">9</td><td>Araklapejuz (71)</td><td>9</td></tr>
-                    <tr><td class="pos">10</td><td>ROBA (65)</td><td>6</td></tr>
-                    <tr><td class="pos">11</td><td>tihon34 (-)</td><td>6</td></tr>
-                    <tr><td class="pos">12</td><td>wasDIE (69)</td><td>5</td></tr>
-                    <tr><td class="pos">13</td><td>XaMyH_MaMyH (-)</td><td>5</td></tr>
-                    <tr><td class="pos">14</td><td>kanatkazx (50)</td><td>3</td></tr>
-                    <tr><td class="pos">15</td><td>vitall_duo (42)</td><td>3</td></tr>
-                    <tr><td class="pos">16</td><td>jetleoden (-)</td><td>3</td></tr>
+                    <tr><td class="pos">10</td><td>tihon34 (-)</td><td>6</td></tr>
+                    <tr><td class="pos">11</td><td>wasDIE (69)</td><td>5</td></tr>
+                    <tr><td class="pos">12</td><td>XaMyH_MaMyH (-)</td><td>5</td></tr>
+                    <tr><td class="pos">13</td><td>kanatkazx (50)</td><td>3</td></tr>
+                    <tr><td class="pos">14</td><td>vitall_duo (42)</td><td>3</td></tr>
+                    <tr><td class="pos">15</td><td>jetleoden (-)</td><td>3</td></tr>
+                    <tr><td class="pos">16</td><td>Mavchik17 (19)</td><td>2</td></tr>
                 </tbody>
             </table>
         </div>
@@ -809,7 +815,7 @@
                 <div class="winner-card"><span class="stage">2 Этап</span> <span class="name">Vin_Disel69</span></div>
                 <div class="winner-card"><span class="stage">3 Этап</span> <span class="name">H_Ravin</span></div>
                 <div class="winner-card"><span class="stage">4 Этап</span> <span class="name">jok</span></div>
-                <div class="winner-card"><span class="stage">5 Этап</span> <span class="empty-winner">—</span></div>
+                <div class="winner-card"><span class="stage">5 Этап</span> <span class="name">ROBA</span></div>
             </div>
         </div>
     </div>
@@ -849,7 +855,8 @@
             stage1: document.getElementById('sub-stage1'),
             stage2: document.getElementById('sub-stage2'),
             stage3: document.getElementById('sub-stage3'),
-            stage4: document.getElementById('sub-stage4')
+            stage4: document.getElementById('sub-stage4'),
+            stage5: document.getElementById('sub-stage5')
         };
 
         function setSubActive(stageId) {
